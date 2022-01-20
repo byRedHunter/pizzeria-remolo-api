@@ -1,0 +1,34 @@
+{
+  "name": "pizzeria-remolo-api",
+  "version": "1.0.0",
+  "description": "<p>Para el manejo de las tareas usar <strong>Projects</strong> de GitHub</p>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app",
+    "start": "node src/app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byRedHunter/pizzeria-remolo-api.git"
+  },
+  "keywords": [],
+  "author": "Jhonny Quispe Navarro <jhonny.quispejl@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/byRedHunter/pizzeria-remolo-api/issues"
+  },
+  "homepage": "https://github.com/byRedHunter/pizzeria-remolo-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
