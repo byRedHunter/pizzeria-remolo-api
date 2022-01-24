@@ -1,3 +1,4 @@
 const Server = require('./Server')
+const Category = require('./Category')
 
-module.exports = { Server }
+module.exports = { Category, Server }
