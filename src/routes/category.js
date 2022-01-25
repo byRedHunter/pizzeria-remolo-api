@@ -1,7 +1,7 @@
 const express = require('express')
 const { check } = require('express-validator')
 
-const { createCategory } = require('../controllers/category')
+const { createCategory, listCategories } = require('../controllers/category')
 const { categoryExist } = require('../helpers')
 const { validateFileWhenUpload, validateFields } = require('../middlewares')
 
@@ -18,5 +18,7 @@ router.post(
 	],
 	createCategory
 )
+
+router.get('/', listCategories)
 
 module.exports = router

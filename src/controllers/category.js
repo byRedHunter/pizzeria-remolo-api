@@ -34,4 +34,24 @@ const createCategory = async (req = request, res = response) => {
 	}
 }
 
-module.exports = { createCategory }
+const listCategories = async (req = request, res = response) => {
+	try {
+		const categories = await Category.find(
+			{ active: true },
+			{
+				_id: 1,
+				name: 1,
+				description: 1,
+				image: 1,
+			}
+		).sort({ createdAt: 1 })
+
+		res.status(200).json(categories)
+	} catch (error) {
+		console.log(error)
+
+		res.status(500).json({ msg: 'Error en el servidor' })
+	}
+}
+
+module.exports = { createCategory, listCategories }
